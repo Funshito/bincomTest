@@ -12,19 +12,52 @@ fridayColors = ['GREEN', 'WHITE', 'GREEN', 'BROWN', 'BLUE', 'BLUE', 'BLACK', 'WH
 
 
 #question 1
-import statistics
 
-monday = statistics.median(mondayColors)
-tuesday = statistics.median(tuesdayColors)
-wednesday = statistics.median(wednesdayColors)
-thursday = statistics.median(thursdayColors)
-friday = statistics.median(fridayColors)
+import math
+monedayLen = len(mondayColors)
+mondayNum = monedayLen/2
+MonNum = math.ceil(mondayNum)
+MondayMean = mondayColors[MonNum]
+print(f"Mean for Monday: {MondayMean}")
 
-print("mean color for monday is: ", monday)
-print(f"mean color for tueday is: {tuesday}")
-print(f"mean color for wednesday is: {wednesday}")
-print(f"mean color for thursday is: {thursday}")
-print(f"mean color for friday is: {friday}")
+tuesdayLen = len(tuesdayColors)
+tuesdayNum = tuesdayLen/2
+tuesNum = math.ceil(tuesdayNum)
+tuesdayMean = tuesdayColors[tuesNum]
+print(f"Mean for Tuesday: {tuesdayMean}")
+
+wednesdayLen = len(wednesdayColors)
+wednesdayNum = wednesdayLen/2
+wedNum = math.ceil(wednesdayNum)
+wednesdayMean = wednesdayColors[wedNum]
+print(f"Mean for Wednesday: {wednesdayMean}")
+
+thursdayLen = len(thursdayColors)
+thursdayNum = thursdayLen/2
+thurNum = math.ceil(thursdayNum)
+thursdayMean = thursdayColors[thurNum]
+print(f"Mean for Thursday: {thursdayMean}")
+
+fridayLen = len(fridayColors)
+fridayNum = fridayLen/2
+friNum = math.ceil(fridayNum)
+fridayMean = fridayColors[friNum]
+print(f"Mean for Friday: {fridayMean}")
+
+
+# import statistics
+
+# monday = statistics.median(mondayColors)
+# tuesday = statistics.median(tuesdayColors)
+# wednesday = statistics.median(wednesdayColors)
+# thursday = statistics.median(thursdayColors)
+# friday = statistics.median(fridayColors)
+
+# print("mean color for monday is: ", monday)
+# print(f"mean color for tueday is: {tuesday}")
+# print(f"mean color for wednesday is: {wednesday}")
+# print(f"mean color for thursday is: {thursday}")
+# print(f"mean color for friday is: {friday}")
 
 
 
