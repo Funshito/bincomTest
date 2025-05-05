@@ -45,7 +45,7 @@ fridayMean = fridayColors[friNum]
 print(f"Mean for Friday: {fridayMean}")
 
 
-# import statistics
+import statistics
 
 # monday = statistics.median(mondayColors)
 # tuesday = statistics.median(tuesdayColors)
@@ -64,7 +64,7 @@ print(f"Mean for Friday: {fridayMean}")
 
 
 #question 2
-from collections import Counter
+
 weekColor = []
 
 
@@ -84,8 +84,51 @@ print("Most frequent color of the week:", most_common)
    
    
    
-   
-   
+#question 3
+weekColor.sort()
+weekLen = len(weekColor)
+medianNumber = weekLen/2
+medianNum = math.ceil(medianNumber)
+medianColor = weekColor[medianNum] 
+print(f"Median color is: {medianColor}")
+
+
+
+
+
+#question 4
+# VarianceColor = statistics.variance(weekColor)
+# print(f"Variance is : {VarianceColor}")
+
+
+
+
+
+#question 5
+probability = weekColor.count('RED') / len(weekColor)
+print(f"Probability of random red is: {probability}")
+
+
+
+
+
+
+
+#question 6
+from collections import Counter
+
+
+
+
+
+
+#question 7
+# def search(arr, target, index=0):
+    
+
+
+
+
 # question 8
 
 
@@ -96,7 +139,7 @@ binary_number = ''.join(random.choice('01') for _ in range(4))
 decimal_number = int(binary_number, 2)
 
 print("Random Binary Number:", binary_number)
-print("Decimal Equivalent:", decimal_number)
+print("Base Conversion:", decimal_number)
 
 
 
@@ -113,30 +156,3 @@ result = fibonacci_sum(50)
 print("Sum of first 50 Fibonacci numbers:", result)
 
 
-# question 7
-
-
-def search(arr, target, index=0):
-    # Base case: If index reaches the end of the list, return -1 (not found)
-    if index >= len(arr):
-        return -1
-    
-    # If the current element matches the target, return the index
-    if arr[index] == target:
-        return index
-    
-    # Recursively search in the rest of the list
-    return search(arr, target, index + 1)
-
-# Get user input
-numbers = list(map(int, input("Enter a list of numbers separated by spaces: ").split()))
-target = int(input("Enter the number to search for: "))
-
-# Perform recursive search
-result = search(numbers, target)
-
-# Print the result
-if result != -1:
-    print(f"Number {target} found at index {result}")
-else:
-    print(f"Number {target} not found in the list")
