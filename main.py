@@ -123,9 +123,28 @@ from collections import Counter
 
 
 #question 7
-# def search(arr, target, index=0):
-    
 
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+def search(arr, target, index=0):
+    
+    if index >= len(arr):
+        return -1
+    
+    if arr[index] == target:
+        return index
+    
+    return search(arr, target, index + 1)
+    
+try:
+    user_input = int(input("Enter a number to search for: "))
+    result = search(numbers, user_input)
+    
+    if result != -1:
+        print(f"Number {user_input} found at index {result}")
+    else:
+        print(f"Number {user_input} was not found in the list.")
+except:
+    print("Please enter a valid number")
 
 
 
